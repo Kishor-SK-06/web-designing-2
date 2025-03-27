@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse Events</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#click").click(function() {
+                alert("Element Clicked!");
+            });
+
+            $("#dblclick").dblclick(function() {
+                alert("Element Double Clicked!");
+            });
+
+            $("#hover").hover(function() {
+                alert("Pointer entered the element!");
+            });
+
+            $("#leave").mouseleave(function() {
+                alert("Pointer left the element!");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>Mouse Events</h3>
+    <button id="click">Click Me</button>
+    <button id="dblclick">Double Click Me</button>
+    <div id="hover" style="border: 1px solid black; width: 100px; height: 50px;">Hover Over Me</div>
+    <div id="leave" style="border: 1px solid black; width: 100px; height: 50px;">Move Pointer Out</div>
+</body>
+</html>

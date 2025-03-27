@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Changing and Manipulating Elements</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#attr").click(function() {
+                alert("Attribute Value: " + $("#example").attr("id"));
+            });
+
+            $("#html").click(function() {
+                alert("HTML Content: " + $("#example").html());
+            });
+
+            $("#text").click(function() {
+                alert("Plain Text: " + $("#example").text());
+            });
+
+            $("#val").click(function() {
+                alert("Form Value: " + $("#input").val());
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>Changing and Manipulating Elements</h3>
+    <div id="example"><strong>Sample HTML Content</strong></div>
+    <button id="attr">Get Attribute</button>
+    <button id="html">Get HTML Content</button>
+    <button id="text">Get Plain Text</button>
+    <input type="text" id="input" placeholder="Enter something">
+    <button id="val">Get Form Value</button>
+</body>
+</html>

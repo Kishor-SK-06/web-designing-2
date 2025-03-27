@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wrap, Unwrap, Remove, and Empty Methods</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Wrap Method
+            $("#wrap").click(function() {
+                $("#example").wrap("<div style='border: 2px solid red; padding: 10px;'></div>");
+                alert("Element Wrapped!");
+            });
+
+            // Unwrap Method
+            $("#unwrap").click(function() {
+                $("#example").unwrap();
+                alert("Parent Element Removed!");
+            });
+
+            // Remove Method
+            $("#remove").click(function() {
+                $("#example").remove();
+                alert("Element Removed!");
+            });
+
+            // Empty Method
+            $("#empty").click(function() {
+                $("#example").empty();
+                alert("All Child Nodes Removed!");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>Wrap, Unwrap, Remove, and Empty Methods</h3>
+    <div id="example" style="background-color: lightblue; padding: 10px;">
+        <p>Child Node 1</p>
+        <p>Child Node 2</p>
+    </div>
+    <button id="wrap">Wrap Element</button>
+    <button id="unwrap">Unwrap Element</button>
+    <button id="remove">Remove Element</button>
+    <button id="empty">Empty Element</button>
+</body>
+</html>

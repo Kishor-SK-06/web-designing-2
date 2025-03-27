@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fade Effects</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#fadeIn").click(function() {
+                $("#fadeBox").fadeIn();
+            });
+
+            $("#fadeOut").click(function() {
+                $("#fadeBox").fadeOut();
+            });
+
+            $("#fadeToggle").click(function() {
+                $("#fadeBox").fadeToggle();
+            });
+
+            $("#fadeTo").click(function() {
+                $("#fadeBox").fadeTo("slow", 0.5);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>Fade Effects</h3>
+    <button id="fadeIn">Fade In</button>
+    <button id="fadeOut">Fade Out</button>
+    <button id="fadeToggle">Fade Toggle</button>
+    <button id="fadeTo">Fade To (50% Opacity)</button>
+    <div id="fadeBox" style="border: 1px solid black; width: 100px; height: 50px; background-color: lightblue; opacity: 1;">Fade Box</div>
+</body>
+</html>

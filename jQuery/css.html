@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apply CSS Properties</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: lightgray;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            // Apply a single CSS property
+            $("#single-css").click(function() {
+                $("#box").css("background-color", "lightblue");
+                alert("Single CSS property applied!");
+            });
+
+            // Apply multiple CSS properties
+            $("#multiple-css").click(function() {
+                $("#box").css({
+                    "background-color": "lightgreen",
+                    "border": "2px solid black",
+                    "border-radius": "10px"
+                });
+                alert("Multiple CSS properties applied!");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>Apply CSS Properties</h3>
+    <div id="box">CSS Box</div>
+    <br>
+    <button id="single-css">Apply Single CSS Property</button>
+    <button id="multiple-css">Apply Multiple CSS Properties</button>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert Methods</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#append").click(function() {
+                $("#target").append("<span> Appended!</span>");
+                alert("Content Appended!");
+            });
+
+            $("#prepend").click(function() {
+                $("#target").prepend("<span>Prepended! </span>");
+                alert("Content Prepended!");
+            });
+
+            $("#after").click(function() {
+                $("#target").after("<div>Inserted After!</div>");
+                alert("Content Inserted After!");
+            });
+
+            $("#before").click(function() {
+                $("#target").before("<div>Inserted Before!</div>");
+                alert("Content Inserted Before!");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>Insert Methods</h3>
+    <div id="target">Target Element</div>
+    <button id="append">Append Content</button>
+    <button id="prepend">Prepend Content</button>
+    <button id="after">Insert After</button>
+    <button id="before">Insert Before</button>
+</body>
+</html>

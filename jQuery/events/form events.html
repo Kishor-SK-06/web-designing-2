@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Events</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#form").submit(function(event) {
+                event.preventDefault();
+                alert("Form Submitted!");
+            });
+
+            $("#input").change(function() {
+                alert("Input value changed!");
+            });
+
+            $("#focus").focus(function() {
+                console.log("Input Focused");
+            });
+
+            $("#blur").blur(function() {
+                console.log("Input Lost Focus");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>Form Events</h3>
+    <form id="form">
+        <input type="text" id="input" placeholder="Change me">
+        <input type="text" id="focus" placeholder="Focus here">
+        <input type="text" id="blur" placeholder="Blur me">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

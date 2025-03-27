@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sliding Effects</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#slideUp").click(function() {
+                $("#slideBox").slideUp();
+            });
+
+            $("#slideDown").click(function() {
+                $("#slideBox").slideDown();
+            });
+
+            $("#slideToggle").click(function() {
+                $("#slideBox").slideToggle();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>Sliding Effects</h3>
+    <button id="slideUp">Slide Up</button>
+    <button id="slideDown">Slide Down</button>
+    <button id="slideToggle">Slide Toggle</button>
+    <div id="slideBox" style="border: 1px solid black; width: 100px; height: 50px; background-color: lightgreen;">Sliding Box</div>
+</body>
+</html>

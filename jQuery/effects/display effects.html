@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Effects</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#show").click(function() {
+                $("#displayBox").show();
+            });
+
+            $("#hide").click(function() {
+                $("#displayBox").hide();
+            });
+
+            $("#toggle").click(function() {
+                $("#displayBox").toggle();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>Display Effects</h3>
+    <button id="show">Show</button>
+    <button id="hide">Hide</button>
+    <button id="toggle">Toggle</button>
+    <div id="displayBox" style="border: 1px solid black; width: 100px; height: 50px; display: none;">Display Box</div>
+</body>
+</html>
