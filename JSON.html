@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Record</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Record</h1>
+    <p id="StudentInfo"></p>
+
+    <script>
+        // JSON object representing the student record
+        let Student = {
+            "name": "Kaushal",
+            "age": 21,
+            "course": "Web Development",
+            "marks": {
+                "css": 90,
+                "aspNet": 85,
+                "formValidation": 88
+            },
+            "subjects": ["CSS Styling", "ASP.NET", "Form Validation", "UI/UX Design"],
+            "graduated": false
+        };
+
+        // Display the student information dynamically
+        let StudentInfo = `
+            Name: ${Student.name} <br>
+            Age: ${Student.age} <br>
+            Course: ${Student.course} <br>
+            Marks: 
+            <ul>
+                <li>CSS: ${Student.marks.css}</li>
+                <li>ASP.NET: ${Student.marks.aspNet}</li>
+                <li>Form Validation: ${Student.marks.formValidation}</li>
+            </ul>
+            Subjects: ${Student.subjects.join(', ')} <br>
+            Graduated: ${Student.graduated ? "Yes" : "No"}
+        `;
+
+        // Inject the information into the HTML
+        document.getElementById("StudentInfo").innerHTML = StudentInfo;
+    </script>
+</body>
+</html>
